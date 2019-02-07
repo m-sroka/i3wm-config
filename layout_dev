@@ -1,0 +1,97 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1031,
+               "width": 1270,
+               "x": 0,
+               "y": 0
+            },
+            "name": "TodoList [~/dev/projects/habit-tracker/TodoList] - ~/.IntelliJIdea2018.2/config/idea.properties - IntelliJ IDEA",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^jetbrains\\-idea$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 458,
+               "width": 734,
+               "x": 0,
+               "y": 0
+            },
+            "name": "vi ~/.config/i3/layout_dev2",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^Gnome\\-terminal$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 458,
+               "width": 734,
+               "x": 0,
+               "y": 0
+            },
+            "name": "maciek@maciek-ThinkPad-E470: ~",
+            "percent": 0.2,
+            "swallows": [
+               {
+               "class": "^Gnome\\-terminal$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1079,
+               "width": 2559,
+               "x": 20,
+               "y": 20
+            },
+            "name": "i3: Layout saving in i3 - Google Chrome",
+            "percent": 0.8,
+            "swallows": [
+               {
+               "class": "^Google\\-chrome$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+
