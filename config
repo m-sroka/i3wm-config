@@ -168,8 +168,7 @@ exec guake
 exec redshift
 exec xinput --set-prop 14 "libinput Natural Scrolling Enabled" 1
 
-# bindsym $mod+o append_layout /home/maciek/.config/i3/layout_dev
-bindsym $mod+o append_layout /home/maciek/.config/i3/layout_dev, exec i3-sensible-terminal, exec google-chrome,exec i3-sensible-terminal
+bindsym $mod+o append_layout $HOME/.config/i3/layout_dev, exec i3-sensible-terminal, exec google-chrome,exec i3-sensible-terminal
 bindsym $mod+2 exec google-chrome
 
 set $volume_step 5
