@@ -175,8 +175,8 @@ bindsym $mod+2 exec google-chrome
 set $volume_step 5
 set $brightness_step 10
 set $get_volume_command
-bindsym XF86MonBrightnessUp exec "xbacklight -inc $brightness_step"; exec bash -c "notify-send 'brightness UP to: `bash /home/maciek/.config/i3/get_brightness.sh`' -t 500"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec $brightness_step"; exec bash -c "notify-send 'brightness DOWN to: `bash /home/maciek/.config/i3/get_brightness.sh`' -t 500"
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +$volume_step%"; exec bash -c "notify-send 'volume UP to: `bash /home/maciek/.config/i3/get_volume.sh`' -t 500"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -$volume_step%"; exec bash -c "notify-send 'volume DOWN to: `bash /home/maciek/.config/i3/get_volume.sh`' -t 500"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc $brightness_step"; exec bash -c "notify-send 'brightness: `bash $HOME/.config/i3/get_brightness.sh | $HOME/.config/progress-bar/progressbar -a`' -t 400"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec $brightness_step"; exec bash -c "notify-send 'brightness: `bash $HOME/.config/i3/get_brightness.sh | $HOME/.config/progress-bar/progressbar -a`' -t 400"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +$volume_step%"; exec bash -c "notify-send 'volume: `bash $HOME/.config/i3/get_volume.sh | $HOME/.config/progress-bar/progressbar -al`' -t 400"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -$volume_step%"; exec bash -c "notify-send 'volume: `bash $HOME/.config/i3/get_volume.sh | $HOME/.config/progress-bar/progressbar -a`' -t 400"
 bindsym F11 fullscreen disable; [class="Gnome-terminal"] focus
