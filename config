@@ -167,9 +167,14 @@ mouse_warping none
 exec guake
 exec redshift
 exec xinput --set-prop 14 "libinput Natural Scrolling Enabled" 1
+exec clipit
 
 bindsym $mod+o append_layout $HOME/.config/i3/layout_dev, exec i3-sensible-terminal, exec google-chrome,exec i3-sensible-terminal
 bindsym $mod+2 exec google-chrome
+bindsym F11 fullscreen disable; [class="Gnome-terminal"] focus
+bindsym $mod+minus exec xrandr --output eDP1 --off; exec pactl set-card-profile 0 output:hdmi-stereo
+bindsym $mod+plus exec xrandr --output eDP1 --auto; exec pactl set-card-profile 0 output:analog-stereo
+
 
 set $volume_step 5
 set $brightness_step 10
@@ -178,4 +183,3 @@ bindsym XF86MonBrightnessUp exec "xbacklight -inc $brightness_step"; exec bash -
 bindsym XF86MonBrightnessDown exec "xbacklight -dec $brightness_step"; exec bash -c "notify-send 'brightness: `bash $HOME/.config/i3/get_brightness.sh | $HOME/.config/i3/bash-progress-bar/progressbar -a`' -t 400"
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +$volume_step%"; exec bash -c "notify-send 'volume: `bash $HOME/.config/i3/get_volume.sh | $HOME/.config/i3/bash-progress-bar/progressbar -al`' -t 400"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -$volume_step%"; exec bash -c "notify-send 'volume: `bash $HOME/.config/i3/get_volume.sh | $HOME/.config/i3/bash-progress-bar/progressbar -al`' -t 400"
-bindsym F11 fullscreen disable; [class="Gnome-terminal"] focus
