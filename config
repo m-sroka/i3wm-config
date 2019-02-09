@@ -166,7 +166,8 @@ mouse_warping none
 # exec xrandr --output eDP-1 --off
 exec guake
 exec redshift
-exec xinput --set-prop 14 "libinput Natural Scrolling Enabled" 1
+exec xinput --set-prop 14 "libinput Natural Scrolling Enabled" 1 # touchpad
+exec xinput --set-prop 10 "libinput Natural Scrolling Enabled" 1 # mouse
 exec clipit
 
 bindsym $mod+o append_layout $HOME/.config/i3/layout_dev, exec i3-sensible-terminal, exec google-chrome,exec i3-sensible-terminal
