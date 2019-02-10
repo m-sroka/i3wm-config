@@ -152,7 +152,8 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        # status_command i3status -c /$HOME/.config/i3/i3status.conf
+        status_command  $HOME/.config/i3/i3statuscustom.sh
 }
 
 
@@ -175,7 +176,6 @@ bindsym $mod+2 exec google-chrome
 bindsym F11 fullscreen disable; [class="Gnome-terminal"] focus
 bindsym $mod+minus exec xrandr --output eDP1 --off; exec pactl set-card-profile 0 output:hdmi-stereo
 bindsym $mod+plus exec xrandr --output eDP1 --auto; exec pactl set-card-profile 0 output:analog-stereo
-
 
 set $volume_step 5
 set $brightness_step 10
