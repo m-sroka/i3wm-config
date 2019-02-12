@@ -5,5 +5,6 @@ do
         read line
         volume=`$HOME/.config/i3/get_volume.sh`
         brightness=`$HOME/.config/i3/get_brightness.sh`
-        echo "BR: $brightness% | VOL: $volume | $line" || exit 1
+        ram=`$HOME/.config/i3/get_used_ram.sh 1 4`
+        echo -e "RAM: $ram | BR: $brightness% | VOL: $volume | $line" || exit 1
 done
