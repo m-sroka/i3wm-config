@@ -177,7 +177,9 @@ exec clipit
 bindsym $mod+o append_layout $HOME/.config/i3/layout_dev, exec i3-sensible-terminal, exec google-chrome,exec i3-sensible-terminal
 bindsym $mod+2 exec google-chrome
 bindsym F11 fullscreen disable; [class="Gnome-terminal"] focus
-bindsym $mod+minus exec xrandr --output eDP1 --off; exec pactl set-card-profile 0 output:hdmi-stereo; exec xrandr --output HDMI1 --auto
+# exec pactl set-card-profile 0 output:hdmi-stereo
+#bindsym $mod+minus exec xrandr --output eDP1 --off; exec xrandr --output HDMI1 --auto; exec pactl set-card-profile 0 output:hdmi-stereo; exec xrandr --output HDMI1 --mode 3440x1440
+bindsym $mod+minus exec xrandr --output eDP1 --off; exec xrandr --output HDMI1 --auto; exec xrandr --output HDMI1 --mode 3440x1440
 bindsym $mod+plus exec xrandr --output eDP1 --auto; exec pactl set-card-profile 0 output:analog-stereo; exec xrandr --output HDMI1 --off
 
 set $volume_step 5
