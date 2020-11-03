@@ -112,8 +112,6 @@ bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
@@ -179,8 +177,10 @@ bindsym $mod+2 exec google-chrome
 bindsym F11 fullscreen disable; [class="Gnome-terminal"] focus
 # exec pactl set-card-profile 0 output:hdmi-stereo
 #bindsym $mod+minus exec xrandr --output eDP1 --off; exec xrandr --output HDMI1 --auto; exec pactl set-card-profile 0 output:hdmi-stereo; exec xrandr --output HDMI1 --mode 3440x1440
-bindsym $mod+minus exec xrandr --output eDP1 --off; exec xrandr --output HDMI1 --auto; exec xrandr --output HDMI1 --mode 3440x1440
-bindsym $mod+plus exec xrandr --output eDP1 --auto; exec pactl set-card-profile 0 output:analog-stereo; exec xrandr --output HDMI1 --off
+#bindsym $mod+minus exec xrandr --output eDP1 --off; exec xrandr --output HDMI1 --auto; exec xrandr --output HDMI1 --mode 3440x1440
+#bindsym $mod+plus exec xrandr --output eDP1 --auto; exec pactl set-card-profile 0 output:analog-stereo; exec xrandr --output HDMI1 --off
+bindsym $mod+minus exec xrandr --output eDP-1 --off; exec xrandr --output HDMI-1 --mode 2560x1440; exec xrandr --output DVI-I-1-1 --mode 2560x1440 --left-of HDMI-1
+bindsym $mod+plus exec xrandr --output eDP-1 --auto; exec pactl set-card-profile 0 output:analog-stereo; exec xrandr --output HDMI-1 --off; exec xrandr --output DVI-I-1-1 --off
 
 set $volume_step 5
 set $brightness_step 10
@@ -191,5 +191,7 @@ bindsym XF86AudioRaiseVolume exec bash -c "`bash $HOME/.config/i3/volume_change.
 bindsym XF86AudioLowerVolume exec bash -c "`bash $HOME/.config/i3/volume_change.sh -5%`"; exec bash -c "notify-send 'volume: `bash $HOME/.config/i3/get_volume.sh | $HOME/.config/i3/bash-progress-bar/progressbar -al`' -t 400"
 
 
+bindsym $mod+Shift+y exec /usr/local/bin/pscreen
 # IntelliJ enable floating popups
 for_window [class="jetbrains-idea"] floating enable
+
